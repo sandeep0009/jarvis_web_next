@@ -3,16 +3,13 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import {
   ClerkProvider,
-  SignInButton,
-  SignedIn,
-  SignedOut,
-  UserButton
+
 } from '@clerk/nextjs'
 
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Jervis",
+  title: "Jarvis",
   description: "Ai platform",
 };
 
@@ -24,16 +21,8 @@ export default function RootLayout({
   return (
     <ClerkProvider>
     <html lang="en">
-      <body className={inter.className}>
-      <SignedOut>
-          <SignInButton />
-        </SignedOut>
-        <SignedIn>
-          <UserButton />
-        </SignedIn>
-        
-        {children}
-        
+      <body className={inter.className} >       
+        {children}       
         </body>
     </html>
     </ClerkProvider>
