@@ -21,17 +21,12 @@ const MbileSideBar = () => {
                     <Button variant="ghost" size="icon" className='md:hidden'>
                         <Menu />
                     </Button>
-                
                 </SheetTrigger>
-
                 <SheetContent side="left" >
                     <Sidebar />
 
                 </SheetContent>
-
             </Sheet>
-
-
 
         </div>
     )
