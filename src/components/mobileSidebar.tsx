@@ -1,6 +1,6 @@
 "use client"
 
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { Button } from './ui/button'
 
 import { Menu } from 'lucide-react'
@@ -14,6 +14,17 @@ import {
 
 
 const MbileSideBar = () => {
+    const[isMounted,setMounted]=useState(false);
+
+    useEffect(()=>{
+        setMounted(true)
+    },[])
+
+
+    if(!isMounted){
+        return null;
+    }
+
     return (
         <div>
             <Sheet>
